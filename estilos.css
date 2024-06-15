@@ -10,6 +10,11 @@
     font-family: var(--fonttextos);
 }
 
+html, body {
+    overflow-x: hidden; /* Remove a rolagem horizontal ( não está no vídeo horiginal, mas foi a única forma de conseguir acabar com a rolagem lateral*/ 
+    overflow-y: hidden;
+}
+
 :root{
     --cortitulo: #d1cccc ;
     --cortextos: #ffffff;
@@ -36,7 +41,8 @@ header{
 header a{
     color: #eeeeee;
     margin-right: 40px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 500;
 
 }
 
@@ -124,7 +130,7 @@ header a{
 .container .thumb{
     position: absolute; /*coloca exatamente onde quer*/
     bottom: 50px;
-    left: 50%;
+    left: 60%;
     display: flex;
     gap: 20px;
 }
@@ -171,6 +177,12 @@ header a{
     color: #eeeeee;
     cursor: pointer;
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.5em;
 
+}
+
+.container .arrows button:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
 }
