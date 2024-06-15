@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* não soma valores. Se ele tem 200px ele se mantem 20px*/
+    text-decoration: none;
+    font-family: var(--fonttextos);
+}
+
+:root{
+    --cortitulo: #d1cccc ;
+    --cortextos: #ffffff;
+    --fonttitulo: "Playfair Display", serif;
+    --fonttextos: "Roboto Condensed", sans-serif;
+}
+
+body{
+    background-color: #000000;
+    color: #eeeeee;
+    font-size: 12px;
+}
+
+header{
+    width: 80%;
+    height: 50px;
+    display: flex; /* cria um container flexivel*/
+    align-items: center; /* alinha os itens na "altura" */
+    position: relative;/* define a posição de um elemento em relação a sua posição original*/
+    z-index: 2;
+    margin: auto; /* dá um espaço inicial na direita e esquerda e centraliza o item*/
+}
+
+header a{
+    color: #eeeeee;
+    margin-right: 40px;
+    font-weight: 300;
+
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    margin-top: -50px; /*ele vai puxar o container junto ao header*/
+    overflow: hidden; /*impede o scroll vertical, escondendo as coisas que "passam" a tela*/
+}
+
+.container .list .list-item{
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Fica exatamente onde queremos que fique. Não afeta a posição de outros itens, posicionando as coisas em relação ao container mais próximo*/
+
+}
+
+.container .list .list-item img{
+    object-fit: cover; /*cobre a tela toda e não distorce*/
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%); /*deixa a img mais escura*/
+
+}
+
+.container .list .list-item .content{
+    position: absolute;
+    top: 20%; /* fará com que o conteúdo dentro se distancie do topo em 20%*/
+    right: 10%;
+    padding-right: 30%;
+    width: 80%;
+    color: #eeeeee;
+    text-shadow: 1px 1px 2px rgb(10, 6, 7);
+
+}
+
+.container .list .list-item .title{
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+
+.container .list .list-item .description{
+    font-size: 1.5em;
+}
+
+.container .list .list-item .buttons{
+    display: grid; /* cria espaços para os itens, cada um ocupa uma área*/
+    grid-template-columns: repeat(2, 130px); /*faz com que se crie 2 colunas, cada uma com 130px*/
+    grid-template-rows: 40px; /* define a altura da "linha"*/
+    margin-top: 20px;
+    gap: 5px;
+
+}
+
+.container .list .list-item .buttons button{
+    border: none;
+    background-color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.container .list .list-item .buttons button:hover{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #eeeeee;
+    transition: 0.7s;
+}
+
+.container .list .list-item .buttons button:nth-child(2){ /*nth-child, permite que escolhamos qual "filho" será modificado quando temos um grupo de itens*/
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #eeeeee;
+}
+
+.container .list .list-item .buttons button:nth-child(2):hover{
+    background-color: #ffffff;
+    border: none;
+    transition: 0.7s;
+    color: #000000;
+}
+
