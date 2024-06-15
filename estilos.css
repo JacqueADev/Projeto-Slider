@@ -121,3 +121,56 @@ header a{
     color: #000000;
 }
 
+.container .thumb{
+    position: absolute; /*coloca exatamente onde quer*/
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.container .thumb .thumb-item{
+    width: 135px;
+    height: 200px;
+    position: relative;
+}
+
+.container .thumb .thumb-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(60%);
+}
+
+.container .thumb .content{
+    position: absolute;
+    bottom: 8px; /*faz com que o texto suba um pouco, ficando em cima da img*/
+    left: 10px;
+    font-size: 17px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    
+}
+
+
+.container .arrows{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 120px;
+    left: 125px;
+    width: 300px;
+}
+
+.container .arrows button{
+    border-radius: 10px;
+    border: none;
+    padding: 12px 17px;
+    background-color: #eee4;
+    color: #eeeeee;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.3em;
+
+}
